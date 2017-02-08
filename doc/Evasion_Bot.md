@@ -41,7 +41,7 @@ Speed is another key to win the competition. Therefore, maximum linear speed hav
 ##### Ability to Servive in Narraw Spaces
 Ability to servive in narraw spaces is critical for two reasons. One, the ecasion bot will lose if the persuit successfully follow it for more than 1 minute. And, stuck in a narraw space will guarantee that happens. Two, if the evasion robot able to move through a narraw path, then it's more challenge for persuit bot to follow it safely. Also, those near obstacles might obstruct the following algorithm on persuit bot.
 
-We have to change the our safety determination. 
+Based on our safety rules, our robot won't go forward if there is a detacted object is in less than 0.8 meter no matter whether this object will indeed block it path. That being said, our robot cannot go through a narraw path and servive in a narraw space. So, we have to change our safety determination machanism. In other words, we have to re-define the danger zone. Only if the closed object that will block robot infront of it's path could be consider as dangerouse.
 
 
 ## Result and Discussion
