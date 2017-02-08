@@ -58,7 +58,11 @@ By doing this, our robot is able to go through a narraw path which improve the s
 
 
 ## Result and Discussion
-As 
+As in our tests and competition, our robot is able to move swiftly without collision. And, it's able to servive in a narraw space (this ability helped us winning one of the rounds). However, it seems problematic if we plan too much for our evation behavior. Those plans is actually became the model of our robot's movements. The robot will follow those kind of pattern so the behavior is more predictable and less randomly. During the competition, we found that this problem will have significant impact of the game result. 
+
+After this competition, we have learned that the robot sensor data is kind of noise in terms of realiability. It's hard to get a persice data twice in a pratice sensor usage. Due to the limitation of the sensor and/or the hardware of robot, we have to apply addition process on the raw sensor datas. 
+
+Another experience we gain is on competition strategy aspect. It turns out having multiple plans will have a huge advantage when competiting with different competitor. There are usually some advantages and disadvantages of a robot and/or algorithm. The weak spot and advantages might be different on each competitor's robot and/or algorithm. Multiple plan will maximize the possibility to catch others' weak spots and avoids others' advantage in game. For those reasons, the chance to win a game will be increased if you have multiple plans.
 
 
 ## Conclusion
