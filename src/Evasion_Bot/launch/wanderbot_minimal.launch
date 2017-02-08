@@ -1,0 +1,31 @@
+<launch>
+  <node name="smoother" pkg="demo1" type="driver_smoother.py">
+    <remap from="cmd_vel" to="cmd_vel_mux/input/teleop"/>
+  </node>
+  <!-- <node name="wander" pkg="wanderbot" type="wander.py">
+    <remap from="cmd_vel" to="cmd_vel_target"/>
+  </node> -->
+
+  <!-- use this if you launch it for a real robot -->
+  <node name="depth_to_laser" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan">
+    <remap from="image" to="camera/depth/image"/>
+    <remap from="scan" to="my_scan"/>
+  </node>
+  <include file="$(find turtlebot_bringup)/launch/3dsensor.launch"/>
+  <include file="$(find turtlebot_bringup)/launch/minimal.launch"/>
+
+  <!-- use this if you launch if for gazebo simulater -->
+  <!-- <node name="joy" pkg="joy" type="joy_node"/> -->
+
+  <!-- <node name="wander" pkg="wanderbot" type="wander.py">
+    <remap from="cmd_vel" to="cmd_vel_target"/>
+  </node> -->
+
+  <!-- <node name="safety_node" pkg="wanderbot" type="joy_dead_bot_switch.py">
+    <remap from="cmd_vel" to="cmd_vel_target"/>
+  </node> -->
+
+  <!-- <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch"/>
+  <param name="world_file" value="/home/jimmy/Documents/CMPUT412/Demo/blank"/> -->
+    <!-- <remap from="world_file" to=""/> -->
+</launch>

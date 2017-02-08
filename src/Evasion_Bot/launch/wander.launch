@@ -1,0 +1,14 @@
+<launch>
+  <node name="smoother" pkg="demo1" type="driver_smoother.py">
+    <remap from="cmd_vel" to="cmd_vel_mux/input/teleop"/>
+  </node>
+  <node name="wander" pkg="wanderbot" type="wander.py">
+    <remap from="cmd_vel" to="cmd_vel_target"/>
+  </node>
+
+  <node name="depth_to_laser" pkg="depthimage_to_laserscan" type="depthimage_to_laserscan">
+    <remap from="image" to="camera/depth/image_raw"/>
+    <remap from="scan" to="scan"/>
+    <param name="scan_height" type="int" value="200" />
+  </node>
+</launch>
