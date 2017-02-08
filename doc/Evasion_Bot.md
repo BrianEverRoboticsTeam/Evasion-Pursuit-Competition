@@ -13,6 +13,18 @@ We mounted our RGB-D sensor at rare of our turtlebbot 2 since this could minimiz
 Our turtlebot 2 is distributed by Clearpath Robotics. Referred to the [Kobuki User Guide](https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=9&ved=0ahUKEwjvhqLH1v_RAhVOw2MKHYAFAY4QFghCMAg&url=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fexport%3Fformat%3Dpdf%26id%3D15k7UBnYY_GPmKzQCjzRGCW-4dIP7zl_R_7tWPLM0zKI&usg=AFQjCNFo0O5d312q_k2JDorv5Q0cIMiZ7A&bvm=bv.146094739,d.cGc&cad=rja), the maximum linear speed of our turtlebot is 0.7 m/s, and the maximum angular speed is 180 degree/s.
 
 
+## Problem Meet
+Basically, there are two main problems we need to solve -- dead end avoidance and blind spot avoidance.
+
+Dead end happens when turtlebot faces to a corner and turning process cannot make it turn around. For example, when turtlebot detect the wall is very close to right side, it turns left. If the turning angle is not large enough, it will detect the wall at left is so close that it has to turn right again.
+## {pic: deadend}
+
+However, we cannot just raise the turning angle because if the turning angle is too large, turtlebot will turn too much which causes the other problem -- blind spot.
+
+Blind spot happens when an object is too close to the turtlebot so that turtlebot cannot detect cannot detect the object. It often happens when turtlebot turning. For example, when the turtlebot turns right, and there is an object at its right side, the turtlebot can only detect area behind the object.
+## {pic: blindspot}
+
+
 ## Approching Details
 Since the competition doesn't tolerate any collision (the robot that responsable for the collision will lose the round), saftey becomes the first priority. At the same time, we have to optimize our speed as fast as possible. Also, evasion bot should be able to go through a narraw path because it's possible that the evasion bot run into a small space (e.t. a corner of walls conbines the persuit robot at the back). 
 
