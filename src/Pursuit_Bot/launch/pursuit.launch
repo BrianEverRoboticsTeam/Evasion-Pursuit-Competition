@@ -1,0 +1,6 @@
+<launch>
+  <node name="pursuit_bot" pkg="pursuit_bot" type="pursuit.py">
+  </node>
+  <include file="$(find turtlebot_bringup)/launch/3dsensor.launch"/>
+  <include file="$(find turtlebot_bringup)/launch/minimal.launch"/>
+</launch>
