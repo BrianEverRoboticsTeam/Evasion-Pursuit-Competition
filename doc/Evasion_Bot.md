@@ -62,7 +62,9 @@ As in our tests and competition, our robot is able to move swiftly without colli
 
 After this competition, we have learned that the robot sensor data is kind of noise in terms of realiability. It's hard to get a persice data twice in a pratice sensor usage. Due to the limitation of the sensor and/or the hardware of robot, we have to apply addition process on the raw sensor datas. 
 
+We also learned, massive human calibration for a robot is not very efficient. The environment in real world will change from time to time, for example, the lighting. Therefore, if we calibrate our robot to cover all the environments and/or situations, that will require tons of work for it. Sometime, the amount of situations is too huge for human to calibrate each of them. The ideal robot programming should be able to adapt in a similar but not exactly the same environment. 
+
 Another experience we gain is on competition strategy aspect. It turns out having multiple plans will have a huge advantage when competiting with different competitor. There are usually some advantages and disadvantages of a robot and/or algorithm. The weak spot and advantages might be different on each competitor's robot and/or algorithm. Multiple plan will maximize the possibility to catch others' weak spots and avoids others' advantage in game. For those reasons, the chance to win a game will be increased if you have multiple plans.
 
 
-## Conclusion
+
